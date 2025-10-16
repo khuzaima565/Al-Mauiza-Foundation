@@ -186,23 +186,17 @@
             .section-padding {
                 padding: 3rem 1rem;
             }
-            .countdown-buttons {
-                display: none;
-            }
-            #countdown-banner .flex-wrap {
-                justify-content: center;
-            }
         }
     </style>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-gray-50">
     <!-- Countdown Banner -->
-    <div id="countdown-banner" class="fixed top-0 left-0 right-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg z-50 p-2">
+    <div id="countdown-banner" class="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg p-2">
         <div class="max-w-7xl mx-auto px-2 md:px-4">
-            <div class="flex flex-wrap items-center justify-center md:justify-between gap-x-4 gap-y-2">
-                <div class="flex items-center gap-x-3 flex-wrap justify-center">
-                    <p class="text-[11px] md:text-xs font-semibold">🎓 Teacher Training Program Starts In:</p>
+            <div class="flex flex-wrap items-center justify-center lg:justify-between gap-x-4 gap-y-2">
+                <div class="flex items-center gap-x-3 justify-center flex-wrap sm:flex-nowrap">
+                    <p class="text-[11px] md:text-xs font-semibold whitespace-nowrap">🎓 Teacher Training Program Starts In:</p>
                     <div class="flex gap-1.5 md:gap-2">
                         <div class="bg-white/20 backdrop-blur-sm px-2 py-1 rounded-lg min-w-[48px] md:min-w-[55px] text-center">
                             <div id="days" class="text-base md:text-lg font-bold leading-tight">00</div>
@@ -222,7 +216,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row gap-2 countdown-buttons">
+                <div class="flex flex-row gap-2">
                     <a href="teacher-training.html" class="bg-white text-indigo-600 px-4 py-2 rounded-full font-bold hover:bg-gray-100 transition transform hover:scale-105 text-center whitespace-nowrap text-sm">
                         Learn More
                     </a>
@@ -235,18 +229,18 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="main-nav" class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-40">
+    <nav id="main-nav" class="w-full bg-white/95 backdrop-blur-sm shadow-md z-30 sticky top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-1.5 md:py-3">
-                <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3">
                     <div>
                         <span class="text-lg md:text-xl font-bold text-gradient">Al Mauiza Foundation</span>
                         <p class="text-[10px] md:text-xs text-gray-500">Registered under Section 42 of the Companies Act (2017)</p>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-6">
+                <div class="hidden lg:flex space-x-6">
                     <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
                     <a href="#vision" class="text-gray-700 hover:text-indigo-600 transition">Vision</a>
                     <a href="#programs" class="text-gray-700 hover:text-indigo-600 transition">Programs</a>
@@ -256,7 +250,7 @@
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden hamburger" type="button" aria-label="Menu">
+                <button id="mobile-menu-button" class="lg:hidden hamburger" type="button" aria-label="Menu">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
@@ -265,7 +259,7 @@
         </div>
         
         <!-- Mobile Drawer (slides from left) -->
-        <div id="mobile-drawer" class="fixed md:hidden left-0 top-0 h-screen w-[80%] max-w-[320px] bg-white shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div id="mobile-drawer" class="fixed lg:hidden left-0 top-0 h-screen w-[80%] max-w-[320px] bg-white shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
             <div class="px-4 pt-8 pb-4 space-y-3">
                 <div class="flex items-center justify-between pb-2 border-b border-gray-200">
                     <span class="text-base font-semibold text-gray-800">Menu</span>
@@ -281,18 +275,18 @@
                 <a href="teacher-training.html" class="block text-gray-700 hover:text-indigo-600 hover:bg-gray-50 px-3 py-2 rounded-md transition">Teacher Training</a>
                 <a href="#leadership" class="block text-gray-700 hover:text-indigo-600 hover:bg-gray-50 px-3 py-2 rounded-md transition">Leadership</a>
                 <a href="#contact" class="block text-gray-700 hover:text-indigo-600 hover:bg-gray-50 px-3 py-2 rounded-md transition">Contact</a>
-                <div class="pt-3 border-t border-gray-200 space-y-2">
+                <!-- <div class="pt-3 border-t border-gray-200 space-y-2">
                     <a href="teacher-training.html" class="block bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold text-center hover:bg-indigo-700 transition">Learn More</a>
                     <a href="https://forms.gle/Ry4sdkVsgU9tztoa6" target="_blank" class="block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold text-center hover:bg-yellow-300 transition">Register Now</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Mobile Overlay -->
-        <div id="mobile-overlay" class="fixed md:hidden inset-0 top-0 bg-black/40 z-40 hidden transition-opacity duration-300 opacity-0"></div>
+        <div id="mobile-overlay" class="fixed lg:hidden inset-0 top-0 bg-black/40 z-40 hidden transition-opacity duration-300 opacity-0"></div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero-section" class="min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+    <section id="hero-section" class="h-[85vh] min-h-[600px] flex items-center justify-center text-white relative overflow-hidden">
         <!-- Background Image -->
         <div class="absolute inset-0">
             <img src="https://i.postimg.cc/hvwTGgSC/freepik-expand-this-image-horizontally-13403.png" alt="Background" class="w-full h-full object-cover">
@@ -838,21 +832,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Dynamic Header Layout Script ---
-            function updateHeaderLayout() {
-                const banner = document.getElementById('countdown-banner');
-                const nav = document.getElementById('main-nav');
-                const hero = document.getElementById('hero-section');
-
-                if (!banner || !nav || !hero) return;
-
-                const bannerHeight = banner.offsetHeight;
-                const totalHeaderHeight = bannerHeight + nav.offsetHeight;
-
-                nav.style.top = `${bannerHeight}px`;
-                hero.style.paddingTop = `${totalHeaderHeight}px`;
-            }
-
             // --- Countdown Timer ---
             function updateCountdown() {
                 const targetDate = new Date('2025-10-27T18:30:00+05:00').getTime();
@@ -930,12 +909,6 @@
             // --- Initializations ---
             updateCountdown();
             setInterval(updateCountdown, 1000);
-            
-            // Use a slight delay for layout calculation to ensure assets are loaded
-            setTimeout(() => {
-                updateHeaderLayout();
-                window.addEventListener('resize', updateHeaderLayout);
-            }, 100);
         });
     </script>
 <script type="module" src="/index.tsx"></script>
